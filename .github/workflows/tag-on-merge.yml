@@ -1,0 +1,10 @@
+name: Auto Tag on Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tag:
+    uses: lytic-brew-mira/infrastructure-ci/.github/workflows/tag-release-template.yml@main
