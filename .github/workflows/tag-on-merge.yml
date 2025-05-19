@@ -10,5 +10,4 @@ permissions:
 
 jobs:
   tag:
-    if: github.repository == 'lytic-brew-mira/ai-journal-mvp'
     uses: lytic-brew-mira/infrastructure-ci/.github/workflows/tag-release-template.yml@main
