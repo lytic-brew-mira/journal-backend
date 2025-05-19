@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   tag:
     uses: lytic-brew-mira/infrastructure-ci/.github/workflows/tag-release-template.yml@main
