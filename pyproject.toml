@@ -1,38 +1,17 @@
-[project]
+[tool.poetry]
 name = "journal-backend"
 version = "0.1.0"
 description = "AI-powered journaling backend with FastAPI and Firestore"
-dependencies = [
-    "fastapi",
-    "uvicorn[standard]",
-    "google-cloud-firestore",
-    "python-dotenv"
-]
+authors = ["Tremaine Johns <tjohns@lyticbrew.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+google-cloud-firestore = "*"
+python-dotenv = "*"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["app"]
-
-[tool.hatch.envs.default]
-python = "3.11"
-dependencies = [
-    "ruff",
-    "black"
-]
-[tool.hatch.envs.default.scripts]
-format = "black app"
-lint = "ruff check app"
-check = [
-    "ruff check app",
-    "black --check app"
-]
-
-[tool.black]
-line-length = 88
-
-[tool.ruff]
-line-length = 88
-exclude = ["__pycache__", ".venv", "build"]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -5,11 +5,14 @@
 - Journal CRUD with per-user isolation (via `X-User-ID` header)
 - Ready to deploy on Cloud Run
 
+## Development
+source $(poetry env info --path)/bin/activate
+
 ## Setup
 ```bash
 cp .env.example .env
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+poetry install
+poetry run uvicorn app.main:app --reload
 ```
 
 ## Docker Build
@@ -26,4 +29,3 @@ gcloud run deploy journal-backend \
   --region=us-central1 \
   --concurrency=40 \
   --allow-unauthenticated
-```
