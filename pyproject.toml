@@ -12,6 +12,11 @@ uvicorn = {extras = ["standard"], version = "*"}
 google-cloud-firestore = "*"
 python-dotenv = "*"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.10"
+black = "^25.1.0"
+pre-commit = "^4.2.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
