@@ -1,10 +1,14 @@
-name: Release
+name: Release on Merge to Main
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+
+permissions:
+  contents: write
+  id-token: write
 
 jobs:
   release:
-    uses: lytic-brew-mira/infrastructure-ci/.github/workflows/release-template.yml@main
+    uses: lytic-brew-mira/infrastructure-ci/.github/workflows/full-release-template.yml@main
