@@ -1,0 +1,32 @@
+# Bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Hatch virtual env symlink (if created)
+.venv/
+
+# Hatch internal state (optional, safe to ignore)
+.hatch/
+
+# Environment variable files
+.env
+.env.*
+
+# VS Code settings (optional but common)
+.vscode/
+
+# OS files
+.DS_Store
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Docker
+*.log
+*.pid
+
+# Hatch lock files (if you generate one)
+requirements.lock.txt
