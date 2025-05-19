@@ -1,0 +1,10 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    uses: lytic-brew-mira/infrastructure-ci/.github/workflows/release-template.yml@main

@@ -1,0 +1,28 @@
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Poetry virtual env (if symlinked locally)
+.venv/
+
+# VS Code settings (optional but common)
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# OS junk
+.DS_Store
+
+# Poetry lock if generated but not committed (optional)
+# poetry.lock
+
+# Logs
+*.log
