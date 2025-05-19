@@ -4,8 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-PROJECT_ID = os.getenv("GCP_PROJECT")
-db = firestore.Client(project=PROJECT_ID)
+db = firestore.Client(database="lytic-brew-mira-development-db")
 
 
 def get_user_collection(user_id: str):
