@@ -1,8 +1,7 @@
-name: Release on PR Merge
+name: Release on Merge to Main
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - main
 
@@ -12,5 +11,4 @@ permissions:
 
 jobs:
   release:
-    if: github.event.pull_request.merged == true
     uses: lytic-brew-mira/infrastructure-ci/.github/workflows/full-release-template.yml@main
