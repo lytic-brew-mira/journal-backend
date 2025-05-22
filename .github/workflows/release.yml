@@ -13,3 +13,4 @@ jobs:
   release:
     if: github.repository == 'lytic-brew-mira/journal-backend'
     uses: lytic-brew-mira/infrastructure-ci/.github/workflows/full-release-template.yml@main
+    secrets: inherit
