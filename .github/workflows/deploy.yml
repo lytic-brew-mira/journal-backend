@@ -8,6 +8,10 @@ on:
         required: true
         type: string
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   deploy:
     uses: lytic-brew-mira/infrastructure-ci/.github/workflows/deploy-to-cloudrun.yml@main
