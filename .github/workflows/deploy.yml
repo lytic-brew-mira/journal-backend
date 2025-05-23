@@ -1,0 +1,19 @@
+name: Deploy to Cloud Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Docker image tag to deploy (e.g., v1.0.1)'
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    uses: lytic-brew-mira/infrastructure-ci/.github/workflows/deploy-to-cloudrun.yml@main
+    with:
+      tag: ${{ inputs.tag }}
+      service_name: journal-backend
+    secrets:
+      WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+      GCP_SERVICE_ACCOUNT: ${{ secrets.GCP_SERVICE_ACCOUNT }}
