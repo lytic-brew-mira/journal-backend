@@ -18,6 +18,7 @@ jobs:
     with:
       tag: ${{ inputs.tag }}
       service_name: journal-backend
+      allow_unauthenticated: false
     secrets:
       WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
       GCP_SERVICE_ACCOUNT: ${{ secrets.GCP_SERVICE_ACCOUNT }}
